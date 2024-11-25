@@ -11,6 +11,7 @@ import { Separator } from '@/components/ui/separator';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
 import Image, { type ImageProps } from 'next/image';
+import { BorderBeam } from './ui/border-beam';
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
@@ -94,6 +95,7 @@ export function Docker() {
             </Tooltip>
           </DockIcon>
         ))}
+        <BorderBeam />
       </Dock>
     </TooltipProvider>
   );

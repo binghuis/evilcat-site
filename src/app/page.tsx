@@ -1,12 +1,12 @@
 'use client';
 import { Docker } from '@/components/docker';
 import ClientTweetCard from '@/components/magicui/client-tweet-card';
-import { BorderBeam } from '@/components/ui/border-beam';
 import NumberTicker from '@/components/ui/number-ticker';
 import { VelocityScroll } from '@/components/ui/scroll-based-velocity';
 import ShineBorder from '@/components/ui/shine-border';
 import SparklesText from '@/components/ui/sparkles-text';
 import { useEffect } from 'react';
+
 export default function App() {
   useEffect(() => {}, []);
 
@@ -14,15 +14,14 @@ export default function App() {
     <main className="global-bg w-full h-full">
       <VelocityScroll
         text="Evil Cat."
-        default_velocity={5}
-        className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
+        default_velocity={2}
+        className="font-display text-center text-5xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
       />
 
-      <div className="w-2/3 h-5/6 m-auto">
+      <div className="w-[860px] h-5/6 m-auto flex flex-col justify-between">
         <div className="flex justify-between gap-8">
           <div className="w-96 relative shadow-2xl rounded-lg">
             <ClientTweetCard id="1678577280489234432" />
-            <BorderBeam />
           </div>
           <ShineBorder
             className="backdrop-blur-md bg-transparent shadow-lg flex-1"
@@ -32,12 +31,6 @@ export default function App() {
               <NumberTicker value={100} />
             </p>
             <SparklesText text="Buy" />
-            CA: 222
-          </ShineBorder>
-          <ShineBorder
-            className="backdrop-blur-md bg-transparent shadow-lg flex-1"
-            color={['#A07CFE', '#FE8FB5', '#FFBE7B']}
-          >
             CA: 222
           </ShineBorder>
         </div>
@@ -54,7 +47,9 @@ export default function App() {
           <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
         </AnimatedGradientText> */}
 
-        <Docker />
+        <div className="mb-24 relative">
+          <Docker />
+        </div>
       </div>
     </main>
   );
