@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
+import IconChat from '@/assets/chat.png';
 import IconDEXScreener from '@/assets/dexscreener.png';
 import IconRaydium from '@/assets/raydium.png';
 import IconTelegram from '@/assets/telegram.png';
@@ -25,6 +26,7 @@ const Icons = {
   dexscreener: (props: Omit<ImageProps, 'src' | 'alt'>) => (
     <Image src={IconDEXScreener} alt="" {...props} />
   ),
+  chat: (props: Omit<ImageProps, 'src' | 'alt'>) => <Image src={IconChat} alt="" {...props} />,
 };
 
 const DATA = {
@@ -44,6 +46,11 @@ const DATA = {
         url: '#',
         icon: Icons.x,
       },
+      Chat: {
+        name: 'Chat',
+        url: '#',
+        icon: Icons.chat,
+      },
     },
   },
 };
@@ -51,7 +58,7 @@ const DATA = {
 export function Docker() {
   return (
     <TooltipProvider>
-      <Dock direction="middle">
+      <Dock direction="middle" className="bg-white shadow-lg">
         {DATA.navbar.map((item) => (
           <DockIcon key={item.label}>
             <Tooltip>
