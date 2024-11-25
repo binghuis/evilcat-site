@@ -1,4 +1,5 @@
 'use client';
+import EvilCat from '@/assets/evilcat.png';
 import { Docker } from '@/components/docker';
 import ClientTweetCard from '@/components/magicui/client-tweet-card';
 import NumberTicker from '@/components/ui/number-ticker';
@@ -6,13 +7,14 @@ import { VelocityScroll } from '@/components/ui/scroll-based-velocity';
 import ShinyButton from '@/components/ui/shiny-button';
 import SparklesText from '@/components/ui/sparkles-text';
 import { Snippet } from '@nextui-org/react';
+import Image from 'next/image';
 import { useEffect } from 'react';
 
 export default function App() {
   useEffect(() => {}, []);
 
   return (
-    <main className="global-bg w-full h-full font-mono">
+    <main className="global-bg w-full h-full font-mono relative">
       <VelocityScroll
         text="Evil Cat."
         default_velocity={2}
@@ -32,8 +34,8 @@ export default function App() {
           <div className="bg-white p-2 rounded-lg shadow-lg">
             <div className="font-bold text-5xl">Evil, but cute!</div>
           </div>
-          <div className="rounded-lg bg-white p-2 shadow-lg">
-            <p className="whitespace-pre-wrap text-7xl font-medium tracking-tighter text-black ">
+          <div className="rounded-lg bg-transparent backdrop-blur-lg  p-2 shadow-lg">
+            <p className="whitespace-pre-wrap text-7xl font-bold tracking-tighter text-black ">
               $<NumberTicker value={1000000} />
             </p>
           </div>
@@ -42,6 +44,13 @@ export default function App() {
           </ShinyButton>
         </div>
       </div>
+      <Image
+        src={EvilCat}
+        alt=""
+        className="absolute -right-64 bottom-0"
+        width={800}
+        height={800}
+      />
 
       <div className="mb-24">
         <Docker />
