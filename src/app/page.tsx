@@ -14,7 +14,7 @@ export default function App() {
   useEffect(() => {}, []);
 
   return (
-    <main className="global-bg w-full h-full font-mono relative">
+    <main className="global-bg w-full h-full font-mono relative overflow-hidden">
       <VelocityScroll
         text="Evil Cat."
         default_velocity={2}
@@ -47,7 +47,7 @@ export default function App() {
       <Image
         src={EvilCat}
         alt=""
-        className="absolute -right-64 bottom-0"
+        className="absolute -right-64 -bottom-7"
         width={800}
         height={800}
       />
