@@ -1,5 +1,5 @@
 'use client';
-import EvilCat from '@/assets/minievilcat.png';
+import EvilCat from '@/assets/evilcat.png';
 import { Docker } from '@/components/docker';
 import ClientTweetCard from '@/components/magicui/client-tweet-card';
 import { BorderBeam } from '@/components/ui/border-beam';
@@ -24,7 +24,7 @@ export default function App() {
         <VelocityScroll
           text="Evil Cat."
           default_velocity={2}
-          className="font-display text-center text-5xl font-bold text-gray-200 tracking-[-0.02em] drop-shadow-sm sm:text-5xl sm:leading-[3.2rem]"
+          className="font-display text-center text-5xl font-bold text-gray-300 tracking-[-0.02em] drop-shadow-sm sm:text-5xl sm:leading-[3.2rem]"
         />
       </div>
       <div className="relative z-10 h-full w-full flex flex-col justify-start items-center lg:justify-between lg:flex-row gap-8 max-w-6xl px-6 mx-auto">
@@ -38,7 +38,7 @@ export default function App() {
               className="text-gray-100"
               text="$EVILCAT"
               sparklesCount={9}
-              colors={{ first: '#FFD700', second: '#FFD700' }}
+              colors={{ first: '#ca8a04', second: '#ca8a04' }}
             />
             <div className="mt-2 hidden sm:block">
               <Snippet color="primary" variant="solid" symbol="CA:">
@@ -71,7 +71,11 @@ export default function App() {
       <div className="py-2 rounded-t-3xl fixed bottom-0 left-0 w-full z-50 bg-transparent backdrop-blur-xl sm:bg-transparent sm:backdrop-blur-none">
         <Docker />
       </div>
-      <Image src={EvilCat} alt="" className="absolute -right-24 bottom-0 max-w-md -z-0" />
+      <Image
+        src={EvilCat}
+        alt=""
+        className="absolute max-w-md sm:max-w-2xl -right-36 bottom-0  -z-0"
+      />
     </main>
   );
 }
