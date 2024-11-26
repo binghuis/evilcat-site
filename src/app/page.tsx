@@ -50,7 +50,7 @@ export default function App() {
           <div>
             <NeonGradientCard className="z-0">
               <span className="pointer-events-none z-10 h-full whitespace-nowrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center sm:text-5xl text-3xl font-bold leading-none tracking-tighter text-transparent">
-                Evil, but cute!
+                Evil, but cute.
               </span>
             </NeonGradientCard>
           </div>
