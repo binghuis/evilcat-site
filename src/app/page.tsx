@@ -18,7 +18,7 @@ export default function App() {
   const router = useRouter();
   useEffect(() => {}, []);
   return (
-    <main className="global-bg bg-black w-screen font-mono relative overflow-x-hidden py-32 lg:h-screen">
+    <main className="global-bg bg-black w-screen font-mono relative overflow-x-hidden py-28 lg:h-screen">
       {/* <div className="absolute left-0 top-0 w-full pt-2">
         <VelocityScroll
           text="Evil Cat."
