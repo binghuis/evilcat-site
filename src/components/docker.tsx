@@ -62,57 +62,59 @@ const DATA = {
 
 export function Docker() {
   return (
-    <TooltipProvider>
-      <Dock direction="middle" className="bg-white shadow-lg">
-        {DATA.navbar.map((item) => (
-          <DockIcon key={item.label}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  target="_blank"
-                  prefetch
-                  href={item.href as unknown as UrlObject}
-                  aria-label={item.label}
-                  className={cn(
-                    buttonVariants({ variant: 'ghost', size: 'icon' }),
-                    'size-12 rounded-full',
-                  )}
-                >
-                  <item.icon className="size-6" />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{item.label}</p>
-              </TooltipContent>
-            </Tooltip>
-          </DockIcon>
-        ))}
-        <Separator orientation="vertical" className="h-full" />
-        {Object.entries(DATA.contact.social).map(([name, social]) => (
-          <DockIcon key={name}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  prefetch
-                  target="_blank"
-                  href={social.url as unknown as UrlObject}
-                  aria-label={social.name}
-                  className={cn(
-                    buttonVariants({ variant: 'ghost', size: 'icon' }),
-                    'size-12 rounded-full',
-                  )}
-                >
-                  <social.icon className="size-6" />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{name}</p>
-              </TooltipContent>
-            </Tooltip>
-          </DockIcon>
-        ))}
-        <BorderBeam />
-      </Dock>
-    </TooltipProvider>
+    <div>
+      <TooltipProvider>
+        <Dock direction="middle" className="bg-white shadow-lg">
+          {DATA.navbar.map((item) => (
+            <DockIcon key={item.label}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link
+                    target="_blank"
+                    prefetch
+                    href={item.href as unknown as UrlObject}
+                    aria-label={item.label}
+                    className={cn(
+                      buttonVariants({ variant: 'ghost', size: 'icon' }),
+                      'size-12 rounded-full',
+                    )}
+                  >
+                    <item.icon className="size-6" />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{item.label}</p>
+                </TooltipContent>
+              </Tooltip>
+            </DockIcon>
+          ))}
+          <Separator orientation="vertical" className="h-full" />
+          {Object.entries(DATA.contact.social).map(([name, social]) => (
+            <DockIcon key={name}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link
+                    prefetch
+                    target="_blank"
+                    href={social.url as unknown as UrlObject}
+                    aria-label={social.name}
+                    className={cn(
+                      buttonVariants({ variant: 'ghost', size: 'icon' }),
+                      'size-12 rounded-full',
+                    )}
+                  >
+                    <social.icon className="size-6" />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{name}</p>
+                </TooltipContent>
+              </Tooltip>
+            </DockIcon>
+          ))}
+          <BorderBeam />
+        </Dock>
+      </TooltipProvider>
+    </div>
   );
 }
