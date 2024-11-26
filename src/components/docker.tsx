@@ -10,8 +10,10 @@ import { buttonVariants } from '@/components/ui/button';
 import { Dock, DockIcon } from '@/components/ui/dock';
 import { Separator } from '@/components/ui/separator';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import Config from '@/config';
 import { cn } from '@/lib/utils';
 import Image, { type ImageProps } from 'next/image';
+import type { UrlObject } from 'url';
 import { BorderBeam } from './ui/border-beam';
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -31,25 +33,28 @@ const Icons = {
 
 const DATA = {
   navbar: [
-    { href: '#', icon: Icons.dexscreener, label: 'DEX Screener' },
-    { href: '#', icon: Icons.raydium, label: 'Raydium' },
+    {
+      href: Config.url.dexscreener,
+      icon: Icons.dexscreener,
+      label: 'DEX Screener',
+    },
+    {
+      href: Config.url.raydium,
+      icon: Icons.raydium,
+      label: 'Raydium',
+    },
   ],
   contact: {
     social: {
       Telegram: {
         name: 'Telegram',
-        url: '#',
+        url: Config.url.telegram,
         icon: Icons.telegram,
       },
       X: {
         name: 'X',
-        url: '#',
+        url: Config.url.x,
         icon: Icons.x,
-      },
-      Chat: {
-        name: 'Chat',
-        url: '#',
-        icon: Icons.chat,
       },
     },
   },
@@ -64,7 +69,9 @@ export function Docker() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href={{ href: item.href }}
+                  target="_blank"
+                  prefetch
+                  href={item.href as unknown as UrlObject}
                   aria-label={item.label}
                   className={cn(
                     buttonVariants({ variant: 'ghost', size: 'icon' }),
@@ -86,7 +93,9 @@ export function Docker() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href={{ href: social.url }}
+                  prefetch
+                  target="_blank"
+                  href={social.url as unknown as UrlObject}
                   aria-label={social.name}
                   className={cn(
                     buttonVariants({ variant: 'ghost', size: 'icon' }),
