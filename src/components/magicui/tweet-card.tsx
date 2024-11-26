@@ -64,7 +64,7 @@ export const TweetSkeleton = ({
 }) => (
   <div
     className={cn(
-      'flex size-full max-h-max min-w-72 flex-col gap-2 rounded-lg border p-4',
+      'flex size-full min-h-96 max-h-max min-w-96 flex-col gap-2 rounded-lg p-4',
       className,
     )}
     {...props}
@@ -113,7 +113,7 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
           href={tweet.user.url}
           target="_blank"
           rel="noreferrer"
-          className="flex items-center whitespace-nowrap font-semibold"
+          className="flex items-center whitespace-nowrap font-semibold text-gray-200"
         >
           {truncate(tweet.user.name, 20)}
           {tweet.user.verified ||
@@ -126,7 +126,7 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
             href={tweet.user.url}
             target="_blank"
             rel="noreferrer"
-            className="text-sm text-gray-500 transition-all duration-75"
+            className="text-sm text-gray-400 transition-all duration-75"
           >
             @{truncate(tweet.user.screen_name, 16)}
           </a>
@@ -135,7 +135,7 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
     </div>
     <a href={tweet.url} target="_blank" rel="noreferrer">
       <span className="sr-only">Link to tweet</span>
-      <Twitter className="size-5 items-start text-black transition-all ease-in-out hover:scale-105" />
+      <Twitter className="size-5 items-start text-gray-700 transition-all ease-in-out hover:scale-105" />
     </a>
   </div>
 );
@@ -154,7 +154,7 @@ export const TweetBody = ({ tweet }: { tweet: EnrichedTweet }) => (
               href={entity.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-normal text-gray-500"
+              className="text-sm font-normal text-gray-400"
             >
               <span>{entity.text}</span>
             </a>
@@ -163,7 +163,7 @@ export const TweetBody = ({ tweet }: { tweet: EnrichedTweet }) => (
           return (
             <span
               key={idx}
-              className="text-sm font-normal"
+              className="text-sm font-normal text-gray-200"
               dangerouslySetInnerHTML={{ __html: entity.text }}
             />
           );
@@ -196,7 +196,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => (
             src={photo.url}
             title={'Photo by ' + tweet.user.name}
             alt={tweet.text}
-            className="h-64 w-5/6 shrink-0 snap-center snap-always rounded-xl border object-cover shadow-sm"
+            className="h-64 w-5/6 shrink-0 snap-center snap-always rounded-xl object-cover shadow-sm"
           />
         ))}
         <div className="shrink-0 snap-center sm:w-2" />
@@ -230,7 +230,7 @@ export const MagicTweet = ({
   return (
     <div
       className={cn(
-        'relative flex size-full max-w-lg flex-col gap-2 overflow-hidden rounded-lg border p-4 backdrop-blur-md',
+        'relative flex size-full max-w-lg flex-col gap-2 overflow-hidden rounded-lg p-4 backdrop-blur-2xl',
         className,
       )}
       {...props}

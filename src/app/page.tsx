@@ -9,6 +9,7 @@ import ShinyButton from '@/components/ui/shiny-button';
 import SparklesText from '@/components/ui/sparkles-text';
 import Config from '@/config';
 import { Snippet } from '@nextui-org/react';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -24,7 +25,7 @@ export default function App() {
         <VelocityScroll
           text="Evil Cat."
           default_velocity={2}
-          className="font-display text-center text-5xl font-bold text-slate-600 tracking-[-0.02em] drop-shadow-sm sm:text-5xl sm:leading-[3.2rem]"
+          className="font-display text-center text-5xl font-bold text-gray-200 tracking-[-0.02em] drop-shadow-sm sm:text-5xl sm:leading-[3.2rem]"
         />
       </div>
       <div className="relative z-10 h-full w-full flex flex-col justify-start items-center lg:justify-between lg:flex-row gap-8 max-w-6xl px-6 mx-auto">
@@ -35,6 +36,7 @@ export default function App() {
         <div className="flex-1 flex flex-col gap-4 justify-start items-center sm:items-start">
           <div className="bg-transparent backdrop-blur-xl p-2 rounded-lg shadow-lg">
             <SparklesText
+              className="text-gray-100"
               text="$EVILCAT"
               sparklesCount={9}
               colors={{ first: '#FFD700', second: '#FFD700' }}
@@ -60,7 +62,11 @@ export default function App() {
             className="flex justify-center sm:justify-start relative"
           >
             <ShinyButton>
-              <div className="font-bold text-5xl sm:text-7xl text-yellow-600">BUY NOW</div>
+              <div className="font-bold text-5xl sm:text-7xl text-yellow-600">
+                <span>
+                  BUY NOW <ArrowRight />
+                </span>
+              </div>
             </ShinyButton>
           </Link>
         </div>

@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 .global-bg {
-  background-image: url('../assets/8.jpg');
+  background-color: black;
+  background-image: url('../assets/8.png');
   background-size: 240px 80px;
   background-repeat: repeat;
   background-position: center;

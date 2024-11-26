@@ -64,7 +64,7 @@ export function Docker() {
   return (
     <div>
       <TooltipProvider>
-        <Dock direction="middle" className="bg-white shadow-lg">
+        <Dock direction="middle" className="bg-gray-400 shadow-lg border-none">
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label}>
               <Tooltip>
