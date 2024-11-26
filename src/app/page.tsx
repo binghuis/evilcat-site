@@ -9,7 +9,6 @@ import ShinyButton from '@/components/ui/shiny-button';
 import SparklesText from '@/components/ui/sparkles-text';
 import Config from '@/config';
 import { Snippet } from '@nextui-org/react';
-import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -63,9 +62,7 @@ export default function App() {
           >
             <ShinyButton>
               <div className="font-bold text-5xl sm:text-7xl text-yellow-600">
-                <span>
-                  BUY NOW <ArrowRight />
-                </span>
+                <span>BUY NOW</span>
               </div>
             </ShinyButton>
           </Link>
