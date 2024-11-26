@@ -74,7 +74,7 @@ export default function App() {
       <Image
         src={EvilCat}
         alt=""
-        className="absolute max-w-md sm:max-w-2xl -right-36 bottom-0  -z-0"
+        className="absolute max-w-sm md:max-w-md lg:max-w-xl -right-36 bottom-0  -z-0"
       />
     </main>
   );
