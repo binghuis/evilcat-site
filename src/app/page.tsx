@@ -68,7 +68,7 @@ export default function App() {
           </Link>
         </div>
       </div>
-      <div className="py-2 md:pb-8 lg:pb-12 rounded-t-3xl fixed bottom-0 left-0 w-full z-50 bg-transparent backdrop-blur-xl sm:bg-transparent sm:backdrop-blur-none">
+      <div className="py-2 lg:pb-4 rounded-t-3xl fixed bottom-0 left-0 w-full z-50 bg-transparent backdrop-blur-xl sm:bg-transparent sm:backdrop-blur-none">
         <Docker />
       </div>
       <Image
