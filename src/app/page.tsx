@@ -36,9 +36,11 @@ export default function App() {
               sparklesCount={9}
               colors={{ first: '#FFD700', second: '#006400' }}
             />
-            <Snippet color="primary" variant="solid" symbol="CA:" className="mt-2 hidden sm:block">
-              {Config.ca}
-            </Snippet>
+            <div className="mt-2 hidden sm:block">
+              <Snippet color="primary" variant="solid" symbol="CA:">
+                {Config.ca}
+              </Snippet>
+            </div>
           </div>
           <div>
             <NeonGradientCard className="z-0">
