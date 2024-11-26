@@ -24,7 +24,7 @@ export default function App() {
         <VelocityScroll
           text="Evil Cat."
           default_velocity={2}
-          className="font-display text-center text-5xl font-bold text-gray-300 tracking-[-0.02em] drop-shadow-sm sm:text-5xl sm:leading-[3.2rem]"
+          className="font-display text-center text-5xl font-bold text-gray-300 tracking-[-0.02em] drop-shadow-sm lg:text-6xl sm:leading-[3.2rem]"
         />
       </div>
       <div className="relative z-10 h-full w-full flex flex-col justify-start items-center lg:justify-between lg:flex-row gap-8 max-w-6xl px-6 mx-auto">
@@ -68,7 +68,7 @@ export default function App() {
           </Link>
         </div>
       </div>
-      <div className="py-2 rounded-t-3xl fixed bottom-0 left-0 w-full z-50 bg-transparent backdrop-blur-xl sm:bg-transparent sm:backdrop-blur-none">
+      <div className="py-2 md:pb-8 lg:pb-12 rounded-t-3xl fixed bottom-0 left-0 w-full z-50 bg-transparent backdrop-blur-xl sm:bg-transparent sm:backdrop-blur-none">
         <Docker />
       </div>
       <Image
