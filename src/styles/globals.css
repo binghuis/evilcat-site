@@ -9,6 +9,11 @@
   background-position: center;
 }
 
+.scroll-container {
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

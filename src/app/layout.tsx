@@ -16,7 +16,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
       <body>
         <Providers>
           <StyledJsxRegistry>
-            <main className="relative w-screen h-screen ">{children}</main>
+            <main className="w-screen h-screen scroll-container">{children}</main>
           </StyledJsxRegistry>
         </Providers>
       </body>
