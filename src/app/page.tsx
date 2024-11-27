@@ -54,7 +54,7 @@ export default function App() {
   useEffect(() => {}, []);
 
   return (
-    <main className="global-bg bg-black font-mono relative pt-16">
+    <main className="global-bg bg-black font-mono relative pt-16 pb-24">
       <div className="absolute top-0 left-0 w-full -z-0">
         <VelocityScroll
           text="Evil Cat."
@@ -62,7 +62,7 @@ export default function App() {
           className="text-5xl font-bold tracking-[-0.02em] text-gray-700 drop-shadow-sm lg:leading-[3rem]"
         />
       </div>
-      <div className="relative z-10 h-full w-full flex flex-col justify-start sm:items-center lg:justify-between lg:flex-row gap-4 max-w-6xl px-6 mx-auto">
+      <div className="relative z-10 flex flex-col justify-start sm:items-center lg:justify-between lg:flex-row gap-4 max-w-6xl px-6 mx-auto">
         <div className=" relative flex-1 flex flex-col justify-start items-center">
           <Image src={EvilCat} alt="" className="max-w-full sm:max-w-sm ml-4 z-10" />
 
@@ -114,7 +114,7 @@ export default function App() {
               Evil, but cute.
             </div>
           </div>
-          <div className="relative rounded-md mb-24">
+          <div className="relative rounded-md">
             <ClientTweetCard id="1678577280489234432" />
             <BorderBeam size={300} duration={12} delay={9} />
           </div>

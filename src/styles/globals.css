@@ -9,7 +9,6 @@
   background-position: center;
   width: 100vw;
   height: 100vh;
-  scroll-behavior: smooth;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
