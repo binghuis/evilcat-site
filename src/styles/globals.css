@@ -14,11 +14,6 @@
   -webkit-overflow-scrolling: touch;
 }
 
-html,
-body {
-  overflow: hidden;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
