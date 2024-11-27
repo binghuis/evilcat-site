@@ -19,15 +19,15 @@ export default function App() {
   const router = useRouter();
   useEffect(() => {}, []);
   return (
-    <main className="global-bg bg-black font-mono relative overflow-x-hidden pt-16 pb-28">
+    <main className="global-bg bg-black font-mono relative overflow-x-hidden pt-16">
       <div className="absolute top-0 left-0 w-full z-20">
         <VelocityScroll
           text="Evil Cat."
           default_velocity={1}
-          className="text-5xl font-bold tracking-[-0.02em] text-gray-700 drop-shadow-sm md:leading-[3rem]"
+          className="text-5xl font-bold tracking-[-0.02em] text-gray-700 drop-shadow-sm lg:leading-[3rem]"
         />
       </div>
-      <div className="relative z-10 h-full w-full flex flex-col justify-start items-center lg:justify-between lg:flex-row gap-8 max-w-6xl px-6 mx-auto">
+      <div className="relative z-10 h-full w-full flex flex-col justify-start items-center lg:justify-between lg:flex-row gap-4 max-w-6xl px-6 mx-auto">
         <div className=" relative flex-1 flex flex-col justify-start items-center">
           <Image src={EvilCat} alt="" className="max-w-full sm:max-w-sm ml-4 z-10 cursor-pointer" />
 
@@ -36,7 +36,7 @@ export default function App() {
             target="_blank"
             className="relative -mt-4"
           >
-            <AnimatedGradientText className="bg-gray-800 text-4xl md:text-5xl rounded-full pt-4">
+            <AnimatedGradientText className="bg-gray-800 text-4xl lg:text-5xl rounded-full pt-4">
               👋 <hr className="mx-2 h-6 w-px shrink-0 bg-gray-300" />{' '}
               <span
                 className={cn(
@@ -65,7 +65,9 @@ export default function App() {
             </div>
           </div>
           <div className="bg-transparent p-4 rounded-xl backdrop-blur-xl shadow-lg pointer-events-none z-10">
-            <div className="text-white text-3xl md:text-5xl">Evil, but cute.</div>
+            <div className="text-white text-center lg:text-left text-3xl sm:text-5xl">
+              Evil, but cute.
+            </div>
           </div>
           <div className="relative rounded-md">
             <ClientTweetCard id="1678577280489234432" />
@@ -73,7 +75,7 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="py-2 lg:pb-4 rounded-t-3xl fixed bottom-0 left-0 w-full z-50 bg-transparent backdrop-blur-lg sm:bg-transparent sm:backdrop-blur-none">
+      <div className="py-2 lg:pb-4 rounded-t-3xl fixed bottom-0 left-0 w-full z-50 bg-transparent backdrop-blur-lg md:bg-transparent md:backdrop-blur-none">
         <Docker />
       </div>
     </main>
