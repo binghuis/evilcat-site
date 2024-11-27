@@ -54,7 +54,7 @@ export default function App() {
   useEffect(() => {}, []);
 
   return (
-    <main className="global-bg bg-black font-mono relative pt-16 pb-24">
+    <main className="global-bg bg-black font-mono relative pt-16 pb-24 xl:flex">
       <div className="absolute top-0 left-0 w-full -z-0">
         <VelocityScroll
           text="Evil Cat."
@@ -62,7 +62,7 @@ export default function App() {
           className="text-5xl font-bold tracking-[-0.02em] text-gray-700 drop-shadow-sm lg:leading-[3rem]"
         />
       </div>
-      <div className="relative z-10 flex flex-col justify-start sm:items-center lg:justify-between lg:flex-row gap-4 max-w-6xl px-6 mx-auto">
+      <div className="relative z-10 flex flex-col justify-start sm:items-center xl:flex-row gap-4 xl:gap-8 max-w-6xl px-6 mx-auto">
         <div className=" relative flex-1 flex flex-col justify-start items-center">
           <Image src={EvilCat} alt="" className="max-w-full sm:max-w-sm ml-4 z-10" />
 
@@ -120,7 +120,7 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="py-2 lg:pb-4 rounded-t-3xl fixed bottom-0 left-0 w-full z-50 bg-transparent backdrop-blur-lg md:bg-transparent md:backdrop-blur-none">
+      <div className="py-2 lg:pb-4 rounded-t-3xl fixed bottom-0 left-0 w-full z-50 bg-transparent backdrop-blur-lg xl:bg-transparent xl:backdrop-blur-none">
         <Docker />
       </div>
     </main>
