@@ -55,7 +55,7 @@ export default function App() {
 
   return (
     <div className="global-bg bg-black font-mono relative pt-16 pb-24 xl:flex">
-      <div className="absolute top-0 left-0 w-full -z-0">
+      <div className="absolute top-0 left-0 w-full z-20 xl:-z-0">
         <VelocityScroll
           text="Evil Cat."
           default_velocity={1}
