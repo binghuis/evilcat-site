@@ -4,7 +4,6 @@ import { Docker } from '@/components/docker';
 import ClientTweetCard from '@/components/magicui/client-tweet-card';
 import AnimatedGradientText from '@/components/ui/animated-gradient-text';
 import { BorderBeam } from '@/components/ui/border-beam';
-import { CoolMode } from '@/components/ui/cool-mode';
 import { VelocityScroll } from '@/components/ui/scroll-based-velocity';
 import SparklesText from '@/components/ui/sparkles-text';
 import Config from '@/config';
@@ -30,17 +29,7 @@ export default function App() {
       </div>
       <div className="relative z-10 h-full w-full flex flex-col justify-start items-start lg:justify-between lg:flex-row gap-8 max-w-6xl px-6 mx-auto">
         <div className=" relative flex-1 flex flex-col justify-start items-center sm:items-start">
-          <CoolMode
-            options={{
-              particle: 'https://raw.githubusercontent.com/binghuis/assets/main/imgs/evilcat.png',
-            }}
-          >
-            <Image
-              src={EvilCat}
-              alt=""
-              className="max-w-full md:max-w-xs ml-4 z-10 cursor-pointer"
-            />
-          </CoolMode>
+          <Image src={EvilCat} alt="" className="max-w-full md:max-w-xs ml-4 z-10 cursor-pointer" />
 
           <Link
             href={Config.url.raydium as unknown as UrlObject}
@@ -70,7 +59,7 @@ export default function App() {
           </div>
         </div>
         <div className="relative shadow-2xl gap-4 rounded-lg flex flex-col flex-shrink-0 flex-grow-0">
-          <div className="bg-transparent backdrop-blur-xl p-4 rounded-xl shadow-xl">
+          <div className="bg-transparent backdrop-blur-xl p-4 rounded-xl shadow-xl hidden sm:block">
             <SparklesText
               className="text-gray-100"
               text="$EVILCAT"
@@ -78,13 +67,13 @@ export default function App() {
               colors={{ first: '#ca8a04', second: '#ca8a04' }}
             />
 
-            <div className="mt-2 hidden sm:block">
+            <div className="mt-2 ">
               <Snippet color="primary" variant="solid" symbol="CA:">
                 {Config.ca}
               </Snippet>
             </div>
           </div>
-          <div className="bg-transparent p-4 rounded-xl backdrop-blur-lg shadow-lg pointer-events-none z-10">
+          <div className="bg-transparent p-4 rounded-xl backdrop-blur-xl shadow-lg pointer-events-none z-10">
             <div className="text-white text-3xl md:text-5xl">Evil, but cute.</div>
           </div>
           <div className="relative rounded-md">
@@ -93,7 +82,7 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="py-2 lg:pb-4 rounded-t-3xl fixed bottom-0 left-0 w-full z-50 bg-transparent backdrop-blur-xl sm:bg-transparent sm:backdrop-blur-none">
+      <div className="py-2 lg:pb-4 rounded-t-3xl fixed bottom-0 left-0 w-full z-50 bg-transparent backdrop-blur-lg sm:bg-transparent sm:backdrop-blur-none">
         <Docker />
       </div>
     </main>
