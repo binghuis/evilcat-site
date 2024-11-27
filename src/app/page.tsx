@@ -54,7 +54,7 @@ export default function App() {
   useEffect(() => {}, []);
 
   return (
-    <main className="global-bg bg-black font-mono relative pt-16 pb-24 xl:flex">
+    <div className="global-bg bg-black font-mono relative pt-16 pb-24 xl:flex">
       <div className="absolute top-0 left-0 w-full -z-0">
         <VelocityScroll
           text="Evil Cat."
@@ -123,6 +123,6 @@ export default function App() {
       <div className="py-2 lg:pb-4 rounded-t-3xl fixed bottom-0 left-0 w-full z-50 bg-transparent backdrop-blur-lg xl:bg-transparent xl:backdrop-blur-none">
         <Docker />
       </div>
-    </main>
+    </div>
   );
 }
