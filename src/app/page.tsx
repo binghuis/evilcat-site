@@ -42,6 +42,14 @@ export default function App() {
         });
       });
   };
+  function truncateString(str: string, maxLength: number): string {
+    if (str.length <= maxLength) {
+      return str;
+    }
+
+    const halfLength = Math.floor((maxLength - 3) / 2);
+    return str.slice(0, halfLength) + '...' + str.slice(-halfLength);
+  }
 
   useEffect(() => {}, []);
 
@@ -54,7 +62,7 @@ export default function App() {
           className="text-5xl font-bold tracking-[-0.02em] text-gray-700 drop-shadow-sm lg:leading-[3rem]"
         />
       </div>
-      <div className="relative z-10 h-full w-full flex flex-col justify-start items-start lg:justify-between lg:flex-row gap-4 max-w-6xl px-6 mx-auto">
+      <div className="relative z-10 h-full w-full flex flex-col justify-start sm:items-center xl:items-start lg:justify-between lg:flex-row gap-4 max-w-6xl px-6 mx-auto">
         <div className=" relative flex-1 flex flex-col justify-start items-center">
           <Image src={EvilCat} alt="" className="max-w-full sm:max-w-sm ml-4 z-10 cursor-pointer" />
 
@@ -86,20 +94,20 @@ export default function App() {
             />
 
             <div className="mt-2 ">
-              <Snippet color="primary" variant="solid" symbol="CA:">
+              <Snippet color="primary" className="text-yellow-600" variant="solid" symbol="CA:">
                 {Config.ca}
               </Snippet>
             </div>
           </div>
 
           <Button
-            className="sm:hidden"
+            className="sm:hidden break-words w-auto"
             color="warning"
             onClick={() => {
               handleCopy(Config.ca);
             }}
           >
-            <span>{Config.ca}</span>
+            {truncateString(Config.ca, 30)}
           </Button>
           <div className="bg-transparent p-4 rounded-xl backdrop-blur-xl shadow-lg">
             <div className="text-white text-center lg:text-left text-3xl sm:text-5xl">
