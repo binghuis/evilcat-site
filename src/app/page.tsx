@@ -7,19 +7,46 @@ import { BorderBeam } from '@/components/ui/border-beam';
 import { VelocityScroll } from '@/components/ui/scroll-based-velocity';
 import SparklesText from '@/components/ui/sparkles-text';
 import Config from '@/config';
-import { cn, Snippet } from '@nextui-org/react';
+import { Button, cn, Snippet } from '@nextui-org/react';
 import { ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import toast from 'react-hot-toast';
 import type { UrlObject } from 'url';
+import { useCopyToClipboard } from 'usehooks-ts';
 
 export default function App() {
-  const router = useRouter();
+  const [copiedText, copy] = useCopyToClipboard();
+
+  const handleCopy = (text: string) => {
+    copy(text)
+      .then(() => {
+        toast.success('CA copied to clipboard!', {
+          icon: '👏',
+          style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+          },
+        });
+      })
+      .catch((error) => {
+        toast.success('Failed to copy!', {
+          icon: '😭',
+          style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+          },
+        });
+      });
+  };
+
   useEffect(() => {}, []);
+
   return (
-    <main className="global-bg bg-black font-mono relative pt-16">
+    <main className="global-bg bg-black font-mono relative pt-28 ">
       <div className="absolute top-0 left-0 w-full z-20">
         <VelocityScroll
           text="Evil Cat."
@@ -27,12 +54,12 @@ export default function App() {
           className="text-5xl font-bold tracking-[-0.02em] text-gray-700 drop-shadow-sm lg:leading-[3rem]"
         />
       </div>
-      <div className="relative z-10 h-full w-full flex flex-col justify-start items-center lg:justify-between lg:flex-row gap-4 max-w-6xl px-6 mx-auto">
+      <div className="relative z-10 h-full w-full flex flex-col justify-start items-start lg:justify-between lg:flex-row gap-4 max-w-6xl px-6 mx-auto">
         <div className=" relative flex-1 flex flex-col justify-start items-center">
           <Image src={EvilCat} alt="" className="max-w-full sm:max-w-sm ml-4 z-10 cursor-pointer" />
 
           <Link
-            href={Config.url.raydium as unknown as UrlObject}
+            href={Config.url.dexscreener as unknown as UrlObject}
             target="_blank"
             className="relative -mt-4"
           >
@@ -64,6 +91,16 @@ export default function App() {
               </Snippet>
             </div>
           </div>
+
+          <Button
+            className="sm:hidden"
+            color="warning"
+            onClick={() => {
+              handleCopy(Config.ca);
+            }}
+          >
+            <span>{Config.ca}</span>
+          </Button>
           <div className="bg-transparent p-4 rounded-xl backdrop-blur-xl shadow-lg">
             <div className="text-white text-center lg:text-left text-3xl sm:text-5xl">
               Evil, but cute.

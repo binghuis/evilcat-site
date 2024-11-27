@@ -1,5 +1,6 @@
 import '@/styles/globals.css';
 import { Metadata } from 'next';
+import { Toaster } from 'react-hot-toast';
 import { Providers } from './providers';
 import StyledJsxRegistry from './registry';
 
@@ -16,7 +17,10 @@ export default function RootLayout(props: { children: React.ReactNode }) {
       <body>
         <Providers>
           <StyledJsxRegistry>
-            <main className="w-screen h-screen scroll-container">{children}</main>
+            <main className="w-screen h-screen scrollbar-hide">
+              {children}
+              <Toaster />
+            </main>
           </StyledJsxRegistry>
         </Providers>
       </body>

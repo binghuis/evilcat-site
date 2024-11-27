@@ -188,8 +188,8 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => (
       </video>
     )}
     {tweet.photos && (
-      <div className="relative flex transform-gpu snap-x snap-mandatory gap-4 overflow-x-auto">
-        <div className="shrink-0 snap-center sm:w-2" />
+      <div className="relative flex transform-gpu snap-x snap-mandatory gap-4 overflow-x-auto scrollbar-hide">
+        <div className="shrink-0 snap-center sm:w-2 " />
         {tweet.photos.map((photo) => (
           <img
             key={photo.url}
