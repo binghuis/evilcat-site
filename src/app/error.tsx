@@ -10,14 +10,14 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 
   return (
     <div>
-      <h2>页面异常</h2>
+      <h2>error</h2>
       <button
         onClick={
           // Attempt to recover by trying to re-render the segment
           () => reset()
         }
       >
-        重试
+        reset
       </button>
     </div>
   );

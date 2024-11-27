@@ -1,3 +1,3 @@
 export default function Default() {
-  return <div>@children/default</div>;
+  return <div>default</div>;
 }
