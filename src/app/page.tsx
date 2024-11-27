@@ -19,7 +19,7 @@ export default function App() {
   const router = useRouter();
   useEffect(() => {}, []);
   return (
-    <main className="global-bg bg-black font-mono relative overflow-x-hidden pt-16">
+    <main className="global-bg bg-black font-mono relative pt-16">
       <div className="absolute top-0 left-0 w-full z-20">
         <VelocityScroll
           text="Evil Cat."
@@ -64,12 +64,12 @@ export default function App() {
               </Snippet>
             </div>
           </div>
-          <div className="bg-transparent p-4 rounded-xl backdrop-blur-xl shadow-lg pointer-events-none z-10">
+          <div className="bg-transparent p-4 rounded-xl backdrop-blur-xl shadow-lg">
             <div className="text-white text-center lg:text-left text-3xl sm:text-5xl">
               Evil, but cute.
             </div>
           </div>
-          <div className="relative rounded-md">
+          <div className="relative rounded-md mb-24">
             <ClientTweetCard id="1678577280489234432" />
             <BorderBeam size={300} duration={12} delay={9} />
           </div>
