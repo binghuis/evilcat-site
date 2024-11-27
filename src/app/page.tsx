@@ -24,17 +24,17 @@ export default function App() {
         <VelocityScroll
           text="Evil Cat."
           default_velocity={1}
-          className="text-5xl  font-bold tracking-[-0.02em] text-gray-700 drop-shadow-sm md:text-7xl md:leading-[5rem]"
+          className="text-5xl font-bold tracking-[-0.02em] text-gray-700 drop-shadow-sm md:leading-[3rem]"
         />
       </div>
-      <div className="relative z-10 h-full w-full flex flex-col justify-start items-start lg:justify-between lg:flex-row gap-8 max-w-6xl px-6 mx-auto">
-        <div className=" relative flex-1 flex flex-col justify-start items-center sm:items-start">
-          <Image src={EvilCat} alt="" className="max-w-full md:max-w-xs ml-4 z-10 cursor-pointer" />
+      <div className="relative z-10 h-full w-full flex flex-col justify-start items-center lg:justify-between lg:flex-row gap-8 max-w-6xl px-6 mx-auto">
+        <div className=" relative flex-1 flex flex-col justify-start items-center">
+          <Image src={EvilCat} alt="" className="max-w-full sm:max-w-sm ml-4 z-10 cursor-pointer" />
 
           <Link
             href={Config.url.raydium as unknown as UrlObject}
             target="_blank"
-            className="flex justify-center sm:justify-start relative -mt-6"
+            className="relative -mt-4"
           >
             <AnimatedGradientText className="bg-gray-800 text-4xl md:text-5xl rounded-full pt-4">
               👋 <hr className="mx-2 h-6 w-px shrink-0 bg-gray-300" />{' '}
@@ -48,15 +48,6 @@ export default function App() {
               <ChevronRight className="ml-1 size-6 transition-transform text-yellow-500 duration-300 ease-in-out group-hover:translate-x-1" />
             </AnimatedGradientText>
           </Link>
-          <div className="relative md:block hidden">
-            <div className="absolute left-0 top-0 w-screen pt-2">
-              <VelocityScroll
-                text="Evil Cat."
-                default_velocity={1}
-                className="font-display text-center text-5xl font-bold text-gray-700 tracking-[-0.02em] drop-shadow-sm lg:text-7xl sm:leading-[3.2rem]"
-              />
-            </div>
-          </div>
         </div>
         <div className="relative shadow-2xl gap-4 rounded-lg flex flex-col flex-shrink-0 flex-grow-0">
           <div className="bg-transparent backdrop-blur-xl p-4 rounded-xl shadow-xl hidden sm:block">
