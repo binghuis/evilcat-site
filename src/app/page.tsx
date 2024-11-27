@@ -62,9 +62,9 @@ export default function App() {
           className="text-5xl font-bold tracking-[-0.02em] text-gray-700 drop-shadow-sm lg:leading-[3rem]"
         />
       </div>
-      <div className="relative z-10 h-full w-full flex flex-col justify-start sm:items-center xl:items-start lg:justify-between lg:flex-row gap-4 max-w-6xl px-6 mx-auto">
+      <div className="relative z-10 h-full w-full flex flex-col justify-start sm:items-center lg:justify-between lg:flex-row gap-4 max-w-6xl px-6 mx-auto">
         <div className=" relative flex-1 flex flex-col justify-start items-center">
-          <Image src={EvilCat} alt="" className="max-w-full sm:max-w-sm ml-4" />
+          <Image src={EvilCat} alt="" className="max-w-full sm:max-w-sm ml-4 z-10" />
 
           <Link
             href={Config.url.dexscreener as unknown as UrlObject}
