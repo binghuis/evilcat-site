@@ -79,7 +79,7 @@ export function Docker() {
                       'size-12 rounded-full',
                     )}
                   >
-                    <item.icon className="size-6" />
+                    <item.icon className="size-8" />
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>
@@ -103,7 +103,7 @@ export function Docker() {
                       'size-12 rounded-full',
                     )}
                   >
-                    <social.icon className="size-6" />
+                    <social.icon className="size-8" />
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>

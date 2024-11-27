@@ -4,9 +4,9 @@ import { Providers } from './providers';
 import StyledJsxRegistry from './registry';
 
 export const metadata: Metadata = {
-  title: 'Tmpl Nextjs',
-  description: 'Tmpl Nextjs',
-  keywords: ['nextjs'],
+  title: '$EVILCAT',
+  description: 'Evil, but cute.',
+  keywords: ['EVILCAT', 'Evil Cat', 'Evil', 'Cat'],
 };
 
 export default function RootLayout(props: { children: React.ReactNode }) {

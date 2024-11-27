@@ -135,7 +135,7 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
     </div>
     <a href={tweet.url} target="_blank" rel="noreferrer">
       <span className="sr-only">Link to tweet</span>
-      <Twitter className="size-5 items-start text-gray-700 transition-all ease-in-out hover:scale-105" />
+      <Twitter className="size-5 items-start text-gray-950 transition-all ease-in-out hover:scale-105" />
     </a>
   </div>
 );
