@@ -16,6 +16,7 @@ const Config = {
     telegram: 'https://t.me/',
   },
   ca: 'zSyuawLybV374Fiufx4bQnLnwfFRxX2cFsQ6kwKpump',
+  xId: '1678577280489234432',
 };
 
 export default Config;

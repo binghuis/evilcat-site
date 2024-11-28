@@ -111,11 +111,11 @@ export default function App() {
           </Button>
           <div className="bg-transparent p-4 rounded-xl backdrop-blur-xl shadow-lg">
             <div className="text-white text-center lg:text-left text-3xl sm:text-5xl">
-              Evil, but cute.
+              Evil, but cute!
             </div>
           </div>
           <div className="relative rounded-md">
-            <ClientTweetCard id="1678577280489234432" />
+            <ClientTweetCard id={Config.xId} />
             <BorderBeam size={300} duration={12} delay={9} />
           </div>
         </div>
