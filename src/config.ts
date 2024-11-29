@@ -12,11 +12,11 @@ const Config = {
   url: {
     raydium: `https://raydium.io/swap/?inputMint=${raydium.chainId}&outputMint=${raydium.pairId}`,
     dexscreener: `https://dexscreener.com/${dexscreener.chainId}/${dexscreener.pairId}`,
-    x: 'https://x.com',
+    x: 'https://x.com/EvilCatMeme',
     telegram: 'https://t.me/',
   },
   ca: 'zSyuawLybV374Fiufx4bQnLnwfFRxX2cFsQ6kwKpump',
-  xId: '1678577280489234432',
+  xId: '1862428073792348535',
 };
 
 export default Config;

@@ -11,12 +11,11 @@ const __dirname = path.dirname(__filename); // get the name of the directory
 
 const nextConfig = {
   reactStrictMode: false,
-  swcMinify: true,
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/styles')],
   },
   compiler: {
-    removeConsole: true,
+    removeConsole: false,
   },
   experimental: {
     typedRoutes: true,

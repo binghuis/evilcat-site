@@ -8,7 +8,6 @@ import {
 import { getTweet, type Tweet } from 'react-tweet/api';
 
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
 
 interface TwitterIconProps {
   className?: string;
@@ -99,13 +98,11 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
   <div className="flex flex-row justify-between tracking-tight">
     <div className="flex items-center space-x-2">
       <a href={tweet.user.url} target="_blank" rel="noreferrer">
-        <Image
+        <img
           title={`Profile picture of ${tweet.user.name}`}
           alt={tweet.user.screen_name}
-          height={48}
-          width={48}
           src={tweet.user.profile_image_url_https}
-          className="overflow-hidden rounded-full border border-transparent"
+          className="overflow-hidden rounded-full w-12 h-12 border border-transparent"
         />
       </a>
       <div>
@@ -227,6 +224,7 @@ export const MagicTweet = ({
   className?: string;
 }) => {
   const enrichedTweet = enrichTweet(tweet);
+
   return (
     <div
       className={cn(

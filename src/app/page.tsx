@@ -64,7 +64,12 @@ export default function App() {
       </div>
       <div className="relative z-10 flex flex-col justify-start sm:items-center xl:flex-row gap-4 xl:gap-8 max-w-6xl px-6 mx-auto">
         <div className=" relative flex-1 flex flex-col justify-start items-center">
-          <Image src={EvilCat} alt="" className="max-w-full sm:max-w-sm ml-4 z-10" />
+          <Image
+            src={EvilCat}
+            alt=""
+            priority={true}
+            className="max-w-full sm:max-w-sm ml-4 z-10"
+          />
 
           <Link
             href={Config.url.dexscreener as unknown as UrlObject}
