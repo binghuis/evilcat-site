@@ -7,42 +7,31 @@ import { BorderBeam } from '@/components/ui/border-beam';
 import { VelocityScroll } from '@/components/ui/scroll-based-velocity';
 import SparklesText from '@/components/ui/sparkles-text';
 import Config from '@/config';
+import { sendIt, toastDark } from '@/lib/utils';
 import { Button, cn, Snippet } from '@nextui-org/react';
 import { ChevronRight } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
-import toast from 'react-hot-toast';
-import type { UrlObject } from 'url';
 import { useCopyToClipboard } from 'usehooks-ts';
 
 export default function App() {
   const [copiedText, copy] = useCopyToClipboard();
+  const router = useRouter();
 
   const handleCopy = (text: string) => {
     copy(text)
       .then(() => {
-        toast.success('CA copied to clipboard!', {
-          icon: '👏',
-          style: {
-            borderRadius: '10px',
-            background: '#333',
-            color: '#fff',
-          },
-        });
+        toastDark('CA copied to clipboard!');
       })
       .catch((error) => {
-        toast.success('Failed to copy!', {
-          icon: '😭',
-          style: {
-            borderRadius: '10px',
-            background: '#333',
-            color: '#fff',
-          },
-        });
+        toastDark('Failed to copy!', { type: 'error' });
       });
   };
   function truncateString(str: string, maxLength: number): string {
+    if (!str) {
+      return 'HODL, we’re heading 🚀🌕!';
+    }
     if (str.length <= maxLength) {
       return str;
     }
@@ -57,7 +46,7 @@ export default function App() {
     <div className="global-bg bg-black font-mono relative pt-16 pb-24 xl:flex">
       <div className="absolute top-0 left-0 w-full z-20 xl:-z-0">
         <VelocityScroll
-          text="Evil Cat."
+          text="$EVILCAT"
           default_velocity={1}
           className="text-5xl font-bold tracking-[-0.02em] text-gray-700 drop-shadow-sm lg:leading-[3rem]"
         />
@@ -71,13 +60,18 @@ export default function App() {
             className="max-w-full sm:max-w-sm ml-4 z-10"
           />
 
-          <Link
-            href={Config.url.dexscreener as unknown as UrlObject}
-            target="_blank"
+          <div
             className="relative -mt-4"
+            onClick={() => {
+              if (Config.url.dexscreener) {
+                window.open(Config.url.dexscreener, '_blank');
+              } else {
+                sendIt();
+              }
+            }}
           >
             <AnimatedGradientText className="bg-gray-800 text-4xl lg:text-5xl rounded-full pt-4">
-              👋 <hr className="mx-2 h-6 w-px shrink-0 bg-gray-300" />{' '}
+              💎🙌 <hr className="mx-2 h-6 w-px shrink-0 bg-gray-300" />{' '}
               <span
                 className={cn(
                   `inline animate-gradient bg-gradient-to-r font-bold from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
@@ -87,7 +81,7 @@ export default function App() {
               </span>
               <ChevronRight className="ml-1 size-6 transition-transform text-yellow-500 duration-300 ease-in-out group-hover:translate-x-1" />
             </AnimatedGradientText>
-          </Link>
+          </div>
         </div>
         <div className="relative shadow-2xl gap-4 rounded-lg flex flex-col flex-shrink-0 flex-grow-0">
           <div className="bg-transparent backdrop-blur-xl p-4 rounded-xl shadow-xl hidden sm:block">
@@ -98,9 +92,14 @@ export default function App() {
               colors={{ first: '#ca8a04', second: '#ca8a04' }}
             />
 
-            <div className="mt-2 ">
-              <Snippet color="primary" className="text-yellow-600" variant="solid" symbol="CA:">
-                {Config.ca}
+            <div className="mt-2">
+              <Snippet
+                color="primary"
+                className="text-yellow-600"
+                variant="solid"
+                symbol={Config.ca ? 'CA:' : ''}
+              >
+                {Config.ca ? Config.ca : 'HODL, we’re heading 🚀🌕!'}
               </Snippet>
             </div>
           </div>
@@ -109,7 +108,11 @@ export default function App() {
             className="sm:hidden break-words w-auto"
             color="warning"
             onClick={() => {
-              handleCopy(Config.ca);
+              if (Config.ca) {
+                handleCopy(Config.ca);
+              } else {
+                sendIt();
+              }
             }}
           >
             {truncateString(Config.ca, 30)}
