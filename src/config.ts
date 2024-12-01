@@ -16,7 +16,7 @@ const Config = {
     dexscreener: dexscreener.pairId
       ? `https://dexscreener.com/${dexscreener.chainId}/${dexscreener.pairId}`
       : '',
-    x: 'https://x.com/EvilCatMeme',
+    x: 'https://x.com/evilcatcoin',
     telegram: 'https://t.me/',
   },
   ca: '',
