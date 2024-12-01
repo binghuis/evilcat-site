@@ -31,5 +31,5 @@ export function toastDark(msg: string, opts?: ToastOptions & { type?: ToastType 
 }
 
 export function sendIt() {
-  toastDark('Keep sending $EVILCAT!', { icon: '🚀🌕' });
+  toastDark('Keep sending!', { icon: '🚀🌕' });
 }
