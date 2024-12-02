@@ -17,7 +17,7 @@ const Config = {
       ? `https://dexscreener.com/${dexscreener.chainId}/${dexscreener.pairId}`
       : '',
     x: 'https://x.com/evilcatcoin',
-    telegram: 'https://t.me/',
+    telegram: 'https://t.me/evilcatzone',
   },
   ca: '',
   xId: '1862839603365081162',
