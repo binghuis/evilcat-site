@@ -20,7 +20,7 @@ const Config = {
     telegram: 'https://t.me/evilcatzone',
   },
   ca: '',
-  xId: '1862839603365081162',
+  xId: '1863480331967598615',
 };
 
 export default Config;
