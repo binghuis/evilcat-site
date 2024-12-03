@@ -19,7 +19,7 @@ const Config = {
     x: 'https://x.com/evilcatcoin',
     telegram: 'https://t.me/evilcatzone',
   },
-  ca: '',
+  ca: 'ATrGjPyFLWRXSzXcZZvt8CfihNPkJjVp55ULZ2QApump',
   xId: '1863480331967598615',
 };
 
