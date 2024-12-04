@@ -12,4 +12,4 @@
 
 这个仓库将作为项目的留念，并希望它能够为有兴趣成为代币开发者的人提供学习参考。
 
-<img width='580px' src='./Macbook-Air-evilcat-site.vercel.app.png' alt='macbook' />
+<img width='600px' src='./Macbook-Air-evilcat-site.vercel.app.png' alt='macbook' />
