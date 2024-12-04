@@ -4,7 +4,7 @@ const raydium = {
 };
 
 const dexscreener = {
-  pairId: '',
+  pairId: '6ov9hy1b3vvahupteynxjqde37kftxxfos9qyo6ft9xz',
   chainId: 'solana',
 };
 
