@@ -4,10 +4,10 @@
 ![nextui](https://img.shields.io/badge/NextUI-black?logo=nextui)
 ![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&labelColor=263238)
 
-This is a meme token project built on the Solana blockchain, featuring a cute silver cat as its token mascot.
+这是一个建立在 Solana 链上的 Meme 代币项目，灵感来自于银渐层 “芬儿”。
 
-However, the token did not develop as expected. Ultimately, the project could not continue and has ceased operations.
+然而，该代币并没有按预期发展。该项目无法继续，已停止运营。
 
-This repository will serve as a memento of the project and provide a learning reference.
+此仓库仅做留念，并提供学习参考。
 
 <img width='600px' src='./Macbook-Air-evilcat-site.vercel.app.png' alt='macbook' />
