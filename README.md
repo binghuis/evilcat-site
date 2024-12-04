@@ -4,12 +4,10 @@
 ![nextui](https://img.shields.io/badge/NextUI-black?logo=nextui)
 ![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&labelColor=263238)
 
-这是一个基于 Solana 链构建的 meme 代币项目，代币形象是一只可爱的银色小猫。
+This is a meme token project built on the Solana blockchain, featuring a cute silver cat as its token mascot.
 
-然而，由于社区共识不足，交易量低迷，代币未能按预期发展。
+However, the token did not develop as expected. Ultimately, the project could not continue and has ceased operations.
 
-最终，项目未能持续推进，目前已停止运营。
-
-这个仓库将作为项目的留念，并希望它能够为有兴趣成为代币开发者的人提供学习参考。
+This repository will serve as a memento of the project and provide a learning reference.
 
 <img width='600px' src='./Macbook-Air-evilcat-site.vercel.app.png' alt='macbook' />
