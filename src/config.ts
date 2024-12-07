@@ -4,7 +4,8 @@ const raydium = {
 };
 
 const dexscreener = {
-  pairId: '6ov9hy1b3vvahupteynxjqde37kftxxfos9qyo6ft9xz',
+  pairId: '',
+  // pairId: '6ov9hy1b3vvahupteynxjqde37kftxxfos9qyo6ft9xz',
   chainId: 'solana',
 };
 
@@ -19,7 +20,7 @@ const Config = {
     x: 'https://x.com/evilcatcoin',
     telegram: 'https://t.me/evilcatzone',
   },
-  ca: '3tTLbkYqFALWG479nVjaKEKEWpXsTobNSvWm8MnRDoqC',
+  ca: '458e48q9Ca2H5wEFzNrzCsfVS4dZiU9zFeUgboLZpump',
   xId: '1863480331967598615',
 };
 
